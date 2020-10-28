@@ -36,7 +36,8 @@ public class SquareServiceImpl implements SquareService{
         Optional<Square> databaseVersion = getSquare(id);
         if(databaseVersion.isPresent()){
             BeanUtils.copyProperties(square,databaseVersion);
-            squareRepository.saveAndFlush(square);
+            return squareRepository.saveAndFlush(square);
+
         }
         throw new NullPointerException();
     }

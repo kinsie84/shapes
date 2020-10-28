@@ -12,12 +12,12 @@ public interface ShapeService {
 
     List<Shape> generateShapes(int number);
 
-    Shape findShapeWithAreaClosestToMean();
-
-    List<Shape> findShapesWithAreaClosestToMean();
-
     List<Shape> getAllShapesSortedByAreaAscending();
 
     List<Shape> getAllShapesSortedByAreaDescending();
+
+    Shape findShapeWithAreaClosestToMean();
+
+    List<Shape> findShapesWithAreaClosestToMean();
 
 }

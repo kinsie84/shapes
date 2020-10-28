@@ -1,7 +1,6 @@
 package com.peter.shapes.repositories;
 
 import com.peter.shapes.models.Circle;
-import com.peter.shapes.models.Square;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -13,5 +12,5 @@ import java.util.List;
 public interface CircleRepository extends JpaRepository<Circle, Long> {
 
     @Query("select c from Circle c where c.area > (:areaParam - 1.0) and c.area < (:areaParam + 1.0)")
-    List<Circle> findSquaresByAreas(@Param("areaParam") double areaParam);
+    List<Circle> findCirclesByAreas(@Param("areaParam") double areaParam);
 }
